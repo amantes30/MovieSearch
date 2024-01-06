@@ -1,4 +1,4 @@
-S<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,13 +9,17 @@ S<!DOCTYPE html>
     
 </head>
 <body>
-    <h1>Movie Search</h1>
-    <section id="searchBar">
-        
+    <header>
+        <h1>Movie Search</h1>
+    </header>
+    
+    <section id="searchBar">       
 
     <form id="searchFrom">
-        <input type="text" placeholder="Search" name="query">
-        <button>Search</button>
+        <input type="text" placeholder="" name="query" autofocus>
+        <button><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+          </svg></button>
     </form>
     </section>
     
@@ -26,6 +30,10 @@ S<!DOCTYPE html>
             
         </ul>
     </div>
+    <footer>
+        <p>Project powered by <a href="https://www.tvmaze.com/"><b>TVMaze</b></a> <span> By <a href="https://omstudio.me/">OMStudio</a></span></p>
+        
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 </body>
