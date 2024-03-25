@@ -3,20 +3,13 @@ var searchList = document.querySelector('#searchList');
 
 searchFrom.addEventListener('submit', async function(e) {
     e.preventDefault();
-    clearSearchResults();
-       
+    clearSearchResults();       
     const userInput = searchFrom.elements.query.value;
     const config = {params:{q:userInput}}
     const result = await axios.get(`https://api.tvmaze.com/search/shows?`, config);
     console.log(result.data[0]);
-
     await DisplaySrchImage(result.data);
     searchFrom.elements.query.value = "";
-
-   
-
-   
-
 });
 
 function clearSearchResults(){
@@ -31,10 +24,7 @@ function clearSearchResults(){
 }
 
 async function DisplaySrchImage(imageSrcArr){
- 
-    
-    for(let i of imageSrcArr){
-        
+    for(let i of imageSrcArr){        
         if (i.show.image){
         const li = document.createElement('li');
         const image = document.createElement('img');

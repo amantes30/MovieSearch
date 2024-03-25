@@ -26,8 +26,12 @@
     text-decoration: none;
     color: black;
 }
+#container{
+    overflow: auto;
+    width: 80%;
+}
 #container img{
-    box-shadow: 10px 5px 5px black;
+   
     transition: 1s;
 }
 #container img:hover{
@@ -35,7 +39,6 @@
     cursor: pointer;
 }
 #searchBar{
-    margin-top: 10%;
     text-align: center;
     width: 100%;
     display: flex;
@@ -70,8 +73,7 @@
     box-shadow: 10px 5px 5px blue;
     cursor: pointer;
 }
-#searchFrom input{
-    height: 30%;
+#searchFrom input{    
     width: 100%;
     font-size: xx-large;
     text-align: center;
@@ -89,9 +91,12 @@ body{
     display: flex;
     align-items: center;
     flex-direction: column;
+    justify-content: space-between;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     height: 100dvh;
     text-align: center;
+    margin: 0;
+    overflow: hidden;
     /* font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ; */
 }
 a{
