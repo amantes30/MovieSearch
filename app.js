@@ -6,7 +6,10 @@ searchFrom.addEventListener('submit', async function(e) {
     clearSearchResults();       
     const userInput = searchFrom.elements.query.value;
     const config = {params:{q:userInput}}
+    const searchingTxt = document.getElementById('searching_txt');
+    searchingTxt.style.visibility= `visible`;
     const result = await axios.get(`https://api.tvmaze.com/search/shows?`, config);
+    searchingTxt.style.visibility= 'hidden';
     console.log(result.data[0]);
     await DisplaySrchImage(result.data);
     searchFrom.elements.query.value = "";
@@ -34,6 +37,7 @@ async function DisplaySrchImage(imageSrcArr){
         link.classList.add('movie_link')
         link.href = i.show.officialSite;
         title.textContent = i.show.name;
+        image.setAttribute('loading', 'lazy')
         image.src = i.show.image.medium;
         link.append(image)
         link.append(title)

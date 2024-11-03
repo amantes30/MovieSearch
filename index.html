@@ -6,32 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Movie Search</title>
-    
+    <link rel="icon" href="https://amantes30.github.io/icons/SVG/logo(new).svg" type="image/icon type">
+    <link rel="apple-touch-icon" href="https://amantes30.github.io/icons/SVG/logo(new).svg">
 </head>
 <body>
     <header>
         <h1>Movie Search</h1>
     </header>
-    
-    <section id="searchBar">       
+    <main>
+        <section id="searchBar">
+        <form id="searchFrom">
+            <input type="text" placeholder="Search Keywords" name="query" autofocus>
+            <button id="searchButton" type="submit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                </svg>
+            </button>
+        </form>
 
-    <form id="searchFrom">
-        <input type="text" placeholder="" name="query" autofocus>
-        <button><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-          </svg></button>
-    </form>
-    </section>
-    
-    <script src="app.js"></script>
-    
-    <div id="container">
-        <ul id="searchList">
-            
-        </ul>
-    </div>
+        </section>
+        <p id="searching_txt">Searching...</p>
+        <script src="app.js"></script>
+
+        <div id="container">
+            <ul id="searchList">
+
+            </ul>
+        </div>
+    </main>
+
     <footer>
-        <p>Project powered by <a href="https://www.tvmaze.com/"><b>TVMaze</b></a> <span> By <a href="https://omstudio.me/">OMStudio</a></span></p>
+        <p>Project powered by <a href="https://www.tvmaze.com/"><img  height="20px" src="https://static.tvmaze.com/images/tvm-header-logo.png"/></a> </p>
         
     </footer>
 

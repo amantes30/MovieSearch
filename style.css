@@ -1,105 +1,152 @@
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100dvh;
+  font-family: sans-serif;
+  margin: 0;
+  background: linear-gradient(to bottom, black 50%, #00002c 100%);
+  color: white;
 
-#container ul{
-    margin-top: 10%;
-    justify-content: space-evenly;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.df{
+  display: flex;
+}
+main{
+  width: 100%;
+  overflow: auto;
+  height: -webkit-fill-available;
+}
+#container ul {
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-#container li{
-    display: block;
-    animation-fill-mode: backwards;
-    border-radius: 10%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-  
-    
+#container li {
+  display: block;
+  animation-fill-mode: backwards;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: box-shadow 150ms ease-in;
+  animation: fadein 4s forwards;
+  max-width: 220px;
 }
-.movie_link{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-    text-decoration: none;
-    color: black;
+.movie_link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  text-decoration: none;
+  color: white;
 }
-#container{
-    overflow: auto;
-    width: 80%;
+#container li:hover {
+  box-shadow: 0 0 5px 2px #0080ff;
+  cursor: pointer;
+
 }
-#container img{
-   
-    transition: 1s;
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
 }
-#container img:hover{
-    box-shadow: 10px 5px 5px rgb(86, 245, 171);
-    cursor: pointer;
+#container {
+  width: 100%;
 }
-#searchBar{
-    text-align: center;
+#container img {
+  transition: 1s;
+  border-radius: 10px;
+}
+
+#searchBar {
+  width: 100%;
+  place-items: center;
+  padding: 50px 0;
+  box-sizing: border-box;
+}
+#searchFrom {
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+}
+#searchButton {
+  border: none;
+  background-color: transparent;
+  transition: 150ms ease-in;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  box-sizing: border-box;
+  height: 100%;
+}
+#searchButton svg{
+  fill: #787878;
+}
+#searchButton:hover {
+  filter: drop-shadow(0px 0px 1px blue);
+  cursor: pointer;
+}
+#searchFrom input {
+  width: 100%;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  outline: none;
+  background: #292929;
+  transition: box-shadow 150ms ease-in;
+  color: white;
+  box-sizing: border-box;
+}
+#searchFrom input:focus-within{
+  outline: none;
+  box-shadow: 0 0 20px 2px #0080ff;
+}
+#searchFrom input:focus-within #searchButton{
+  opacity: 0;
+}
+#searching_txt{
+  animation: blink 1s ease-in-out infinite;
+  visibility: hidden;
+  text-align: center;
+}
+@keyframes blink {
+  from {
+    opacity: 0.2;
+  }
+  to{
+    opacity: 1;
+  }
+
+}
+@media screen and (max-width: 400px) {
+  #container li {
+    width: 40%;
+  }
+  #container li img{
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    
+  }
 }
-#searchFrom{
-    width: 80%;
-    max-width: 800px;
-    text-align: center;    
-    display: flex;
-    position: relative;
-    
+::-webkit-scrollbar{
+  width: 10px;
 }
-#searchFrom button{
-    font-size: x-large;
-    border: none;
-    border-radius: 10%;
-    background-color: transparent;
-    backdrop-filter: blur(2px);
-    transition: 1s;
-    padding: 1%;
-    width: 50px;
-    height: 95%;
-    position: absolute;
-    right: 0;
-    
+::-webkit-scrollbar-track{
+  background: transparent;
 }
-#searchFrom button:hover{
-    box-shadow: 10px 5px 5px blue;
-    cursor: pointer;
+::-webkit-scrollbar-thumb{
+  background: #0080ff;
+  border-radius: 10px;
 }
-#searchFrom input{    
-    width: 100%;
-    font-size: xx-large;
-    text-align: center;
-    border-radius: 15px;
-    padding: 5px;
-}
-footer{
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.151);
-    color: black;
-    backdrop-filter: blur(5px);
-    
-}
-body{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-between;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    height: 100dvh;
-    text-align: center;
-    margin: 0;
-    overflow: hidden;
-    /* font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ; */
-}
-a{
-    text-decoration: none;
-    color: black;
+::-webkit-scrollbar-thumb:hover{
+  box-shadow: 0 0 5px 2px #0080ff;
 }
